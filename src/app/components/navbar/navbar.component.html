@@ -1,13 +1,10 @@
 <div class="logo-container" (click)="toggleNavbar()">
   <img src="assets/images/logo.png" alt="Your Logo" class="logo">
+  <div class="hamburger-menu" (click)="toggleNavbar()">
+    ☰
+  </div>
 </div>
 
-<button class="menu-button" (click)="toggleNavbar()">
-  <span class="hamburger-icon"></span>
-  <span class="hamburger-icon"></span>
-  <span class="hamburger-icon"></span>
-  <span class="hamburger-icon"></span>
-</button>
 
 <header [ngClass]="{'header-visible': isNavbarVisible}">
   <mat-toolbar>

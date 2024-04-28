@@ -50,3 +50,17 @@ p {
 
 }
 
+@media (max-width: 768px) {
+  .video-grid {
+    grid-template-columns: 1fr; /* Stack videos vertically on small screens */
+  }
+  .passions-container {
+    margin: 20px auto; /* Smaller margin for better use of space */
+  }
+  .passions-container h1 {
+    font-size: 24px; /* Smaller font size for headers */
+  }
+  .passions-container p {
+    font-size: 18px; /* Smaller font size for paragraphs */
+  }
+}

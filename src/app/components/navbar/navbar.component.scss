@@ -149,69 +149,39 @@ header.visible {
 
 }
 
-/* Responsive Styles */
+
+/* Mobile-specific styles */
 @media (max-width: 768px) {
   header {
-    flex-direction: column;
-    padding: 10px;
+    height: 60px; /* Smaller header for mobile */
   }
-
+  .logo {
+    height: 60px;
+  }
   .nav-container {
     flex-direction: column;
-    align-items: center;
-    display: none; /* Initially hidden */
+    align-items: flex-start;
   }
-
-  .nav-container.active {
-    display: flex; /* Show when active */
-  }
-
   .nav-container button {
-    font-size: 1rem;
-    margin-bottom: 10px;
+    font-size: 16px; /* Smaller font size */
+    margin: 10px 0; /* Add space between buttons */
   }
-
   .logo-container {
-    position: absolute;
-    top: 10px; /* Adjust to match header padding */
-    right: 10px;
-    display: block; /* Show the logo */
+    right: 10px; /* Less offset on mobile */
   }
-
-  .menu-button {
-    display: flex; /* Show the hamburger menu */
-    position: absolute;
-    top: 10px;
-    left: 10px;
+  .github-logo, .linkedin-logo {
+    display: none; /* Optionally hide for simplicity */
   }
 }
 
-/* Very small devices */
-@media (max-width: 480px) {
-  /* Adjust styles for very small screens as needed */
-  .nav-container button {
-    font-size: 0.875rem; /* Smaller font size */
-  }
-}
-
-.menu-button {
+/* Hamburger menu styles */
+.hamburger-menu {
   display: none;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 30px;
-  height: 25px;
-  background: transparent;
-  border: none;
   cursor: pointer;
-  padding: 0;
-  box-sizing: border-box;
 }
 
-.hamburger-icon {
-  width: 30px;
-  height: 3px;
-  background: white;
-  border-radius: 10px;
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: block; /* Show hamburger icon on small screens */
+  }
 }
-
-
