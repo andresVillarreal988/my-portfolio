@@ -8,7 +8,7 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 160px;
+  height: 100px;
   transition: transform 0.3s ease-in-out;
   transform: translateX(100%);
    /* Hide navbar off-screen to the right */
@@ -32,7 +32,7 @@ header {
 
 
 mat-toolbar {
-  height: 160px; /* Adjust this value as needed */
+  height: 100px; /* Adjust this value as needed */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -54,7 +54,7 @@ mat-toolbar {
     margin-right: 20px;
     color: white;
     overflow: hidden;
-    font-size: 30px;
+    font-size: 20px;
 
     &:after {
       content: '';
@@ -88,7 +88,7 @@ mat-toolbar {
 }
 
 .logo {
-  height: 165px; /* Adjust to align with the new toolbar height */
+  height: 105px; /* Adjust to align with the new toolbar height */
   width: auto;
   vertical-align: middle;
 }
@@ -120,7 +120,7 @@ header.visible {
 }
 
 .linkedin {
-  width: 120px;
+  width: 105px;
     height: auto;
 
 
@@ -135,7 +135,7 @@ header.visible {
   /* Position it as needed within the navbar */
   display: flex;
   align-items: center;
-  margin-left: 130px;
+  margin-left: 100px;
 }
 
 .github-logo:hover {
@@ -143,7 +143,7 @@ header.visible {
 }
 
 .github {
-  width: 120px;
+  width: 100px;
     height: auto;
 
 
