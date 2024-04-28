@@ -1,0 +1,163 @@
+.hero-section {
+  background: url('../../../assets/images/webdev1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-content {
+  max-width: 700px;
+  background-color: #182130; /* Optional: for better readability */
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.about-section {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+mat-card {
+  max-width: 900px; // Adjust based on your design preference
+  margin-top: -5rem; // Pulls the card up into the hero section
+}
+
+.about-section {
+  display: flex;
+  justify-content: center;
+  padding: 4rem 0; // Adds padding above and below the section
+}
+
+mat-card {
+  max-width: 1650px; // Adjust as needed for your design
+  margin: auto; // Center the card in the section
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); // Adds subtle shadow for depth
+  border-radius: 15px; // Soften the edges of the card
+  overflow: hidden; // Ensures the child elements adhere to the border radius
+}
+
+mat-card-header {
+  display: flex;
+  justify-content: center;
+  background-color: #182130; // Matches the header color to hero content
+  color: white;
+  padding: 2rem;
+  border-bottom: 5px solid #20304a; // Adds a distinct separation from the content
+}
+
+mat-card-title {
+  font-size: 2.5rem; // Increase the title font size for emphasis
+}
+
+mat-card-content {
+  padding: 2rem;
+  font-size: 1.2rem; // Adjust the font size for better readability
+  line-height: 1.6; // Increase line height for better text flow
+  color: #333; // Dark color for text for readability
+}
+
+.about-images {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+  gap: 1rem; // Adds space between images
+}
+
+mat-card img {
+  width: 100%; // Make images take up all available space
+  max-height: 640px;
+  max-width: 400px;// Set a maximum height to ensure the images are not too tall
+  object-fit: cover; // Ensure the aspect ratio of the images is maintained
+  margin: 0 10px; // Add some space between the images
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Optional: add shadow for depth
+}
+
+@media (max-width: 768px) {
+  .about-images {
+    flex-direction: column;
+  }
+
+  mat-card img {
+    max-width: 100%; // Each image will take the full width of the card
+    margin-bottom: 20px; // Add space between stacked images
+  }
+}
+
+.about-content {
+  padding: 40px;
+
+}
+
+.about-text {
+  font-size: 25px;
+  color: black;
+
+
+}
+
+.technologies-section {
+  padding: 4rem 0; // Adds padding above and below the section
+  background-color: #f5f5f5; // Use a different background to distinguish the section
+  text-align: center; // Center-aligns the text
+}
+
+.technologies-title {
+  font-size: 2rem; // Sets the title font size
+  margin-bottom: 2rem; // Adds space below the title
+  color: #333; // Sets the title color
+}
+
+.technologies-logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); // Creates a responsive grid
+  grid-gap: 30px; // Adds space between logos
+  padding: 0 3rem; // Adds padding on the sides
+  max-width: 1200px; // Maximum width of the grid
+  margin: 0 auto; // Centers the grid in the section
+}
+
+.technologies-logos img {
+  width: 100%; // Makes the images responsive within their cell
+  max-width: 150px; // Maximum width of each logo
+  height: auto; // Maintains the aspect ratio of the logos
+  padding: 1rem; // Adds padding around the logos to create space
+  object-fit: contain; // Ensures the logos are fully visible within their cell
+   // Optional: Adds subtle shadow for depth
+  background-color: white; // Use a white background to accommodate any logo with transparency
+  border-radius: 5px;
+  // Optional: Rounds the corners of the images
+}
+
+@media (max-width: 768px) {
+  .technologies-logos {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); // Adjusts grid for smaller screens
+  }
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px; // Or any other fixed height you prefer
+  padding: 1rem; // This padding can be adjusted
+  // Remove background-color and box-shadow if you want full transparency
+}
+
+.logo-container img {
+  max-width: 80%; // Scales down the logo a bit, preventing it from touching the edges
+  max-height: 80%; // Same as above
+  object-fit: contain;
+  // Remove any border or box-shadow applied directly to the image
+}
+
+.imagenlogos {
+  margin-right: 20px;
+
+}
+
+

@@ -1,0 +1,24 @@
+<div class="logo-container" (click)="toggleNavbar()">
+  <img src="assets/images/logo.png" alt="Your Logo" class="logo">
+</div>
+
+<header [ngClass]="{'header-visible': isNavbarVisible}">
+  <mat-toolbar>
+    <div class="nav-container">
+      <button mat-button routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</button>
+      <button mat-button routerLink="/portfolio" routerLinkActive="active">Portfolio</button>
+      <button mat-button routerLink="/passions" routerLinkActive="active">Passions</button>
+      <button mat-button routerLink="/contact" routerLinkActive="active">Contact</button>
+      <a href="https://www.linkedin.com/in/andr%C3%A9s-villarreal-reyes-1a7474229/" target="_blank" class="linkedin-logo">
+        <img src="assets/images/Linkedin-logo-png.png" alt="LinkedIn" class="linkedin" />
+      </a>
+      <a href="https://github.com/andresVillarreal988" target="_blank" class="github-logo">
+        <img src="assets/images/github2.png" alt="LinkedIn" class="github" />
+      </a>
+    </div>
+    <!-- Add a spacer to push the remaining buttons to the right -->
+    <div class="spacer"></div>
+    <!-- Add your logo or brand name here -->
+
+  </mat-toolbar>
+</header>

@@ -1,0 +1,52 @@
+.passions-container {
+  max-width: 1500px;
+  margin: 250px auto;
+  text-align: center;
+}
+
+.passions-container h2 {
+  margin-bottom: 2rem;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(900px, 1fr));
+  grid-gap: 1rem;
+}
+
+.video-container {
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  color: white;
+  margin-bottom: 50px;
+
+}
+
+p {
+  margin-bottom: 50px;
+  font-size: 30px;
+  color:white;
+
+}
+

@@ -1,0 +1,43 @@
+.portfolio-container {
+  max-width: 1100px;
+  margin: auto;
+  margin-top: 200px;
+}
+
+.experience {
+  color:black;
+  background: #fff; // White background for the box
+  border-radius: 8px; // Rounded corners
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Subtle shadow for depth
+  padding: 2rem; // Spacing inside the box
+  margin-bottom: 2rem; // Space between each experience box
+  display: flex;
+  align-items: flex-start; // Align the logo and details to the start
+  flex-wrap: wrap; // Ensure responsiveness
+  gap: 1rem; // Spacing between logo and details when wrapped
+}
+
+.company-logo {
+  width: 400px; // Adjust as needed
+  margin-right: 1rem;
+}
+
+.experience-details {
+  flex-grow: 1;
+  font-size: 20px;
+}
+
+.role {
+  font-weight: bold;
+}
+
+.dates {
+  font-style: italic;
+  color: #666;
+}
+
+h1 {
+  color:white;
+
+}
+
