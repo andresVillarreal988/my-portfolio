@@ -149,10 +149,9 @@ header.visible {
 
 }
 
-/* Styles for devices with a max width of 768px (tablets and mobile devices) */
+/* Responsive Styles */
 @media (max-width: 768px) {
   header {
-    height: auto;
     flex-direction: column;
     padding: 10px;
   }
@@ -160,34 +159,38 @@ header.visible {
   .nav-container {
     flex-direction: column;
     align-items: center;
+    display: none; /* Initially hidden */
+  }
+
+  .nav-container.active {
+    display: flex; /* Show when active */
   }
 
   .nav-container button {
-    font-size: 16px;
-    margin-bottom: 10px; /* Stack buttons vertically with space between */
+    font-size: 1rem;
+    margin-bottom: 10px;
   }
 
-  .logo-container,
-  .linkedin-logo,
-  .github-logo {
-    display: none; /* Optionally hide logos on smaller screens */
+  .logo-container {
+    position: absolute;
+    top: 10px; /* Adjust to match header padding */
+    right: 10px;
+    display: block; /* Show the logo */
   }
 
-  .logo {
-    height: 80px; /* Adjust logo size for smaller screens */
-  }
-
-  mat-toolbar {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  .menu-button {
+    display: flex; /* Show the hamburger menu */
+    position: absolute;
+    top: 10px;
+    left: 10px;
   }
 }
 
-/* Styles for very small devices */
+/* Very small devices */
 @media (max-width: 480px) {
+  /* Adjust styles for very small screens as needed */
   .nav-container button {
-    font-size: 14px; /* Smaller font size for small devices */
+    font-size: 0.875rem; /* Smaller font size */
   }
 }
 
@@ -211,9 +214,4 @@ header.visible {
   border-radius: 10px;
 }
 
-@media (max-width: 768px) {
-  .menu-button {
-    display: flex;
-  }
-}
 
