@@ -2,13 +2,15 @@
   <img src="assets/images/logo.png" alt="Your Logo" class="logo">
 </div>
 
+<button class="menu-button" (click)="toggleNavbar()">
+  <span class="hamburger-icon"></span>
+  <span class="hamburger-icon"></span>
+  <span class="hamburger-icon"></span>
+</button>
+
 <header [ngClass]="{'header-visible': isNavbarVisible}">
   <mat-toolbar>
-    <button class="menu-button" (click)="toggleNavbar()">
-      <span class="hamburger-icon"></span>
-      <span class="hamburger-icon"></span>
-      <span class="hamburger-icon"></span>
-    </button>
+
     <div class="nav-container">
       <button mat-button routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</button>
       <button mat-button routerLink="/portfolio" routerLinkActive="active">Portfolio</button>
