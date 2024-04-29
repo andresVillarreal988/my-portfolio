@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { LightboxModule } from 'ngx-lightbox';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
  import { MatButtonModule } from '@angular/material/button';
  import { MatIconModule } from '@angular/material/icon';
  import { MatCardModule } from '@angular/material/card';
+import { CertificationsAndStudiesComponent } from './pages/certifications-and-studies/certifications-and-studies.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     PortfolioComponent,
     PassionsComponent,
     ContactComponent,
-    NavbarComponent
+    NavbarComponent,
+    CertificationsAndStudiesComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +33,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatToolbarModule,
         MatButtonModule,
         MatIconModule,
-        MatCardModule
+        MatCardModule,
+        LightboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

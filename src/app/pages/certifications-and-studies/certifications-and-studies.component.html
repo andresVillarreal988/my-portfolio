@@ -1,0 +1,18 @@
+<div class="certifications-studies-section">
+  <h1>Certifications & Studies</h1>
+  <div class="certifications">
+    <mat-card *ngFor="let certification of certifications" class="certification-card">
+      <mat-card-header>
+        <mat-card-title>{{ certification.title }}</mat-card-title>
+        <mat-card-subtitle>{{ certification.issuer }}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image [src]="certification.image" alt="{{ certification.title }}">
+      <mat-card-content>
+        <p><strong>Date:</strong> {{ certification.dateRange }}</p>
+        <p>{{ certification.description }}</p>
+      </mat-card-content>
+      <button mat-button class="goto-site-btn" (click)="goToSite(certification.url)">Go to Site</button>
+    </mat-card>
+  </div>
+</div>
+

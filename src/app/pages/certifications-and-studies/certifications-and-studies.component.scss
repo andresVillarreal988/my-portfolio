@@ -1,0 +1,100 @@
+.certifications-studies-section {
+/* Light background for the entire section */
+  padding: 200px 0; /* Padding for top and bottom */
+  text-align: center;
+  color: #333; /* Dark grey color for text for better readability */
+}
+
+.certifications-studies-section h1 {
+  font-size: 2.5rem; /* Increased font size for the heading */
+  color: white; /* Dark blue color for the heading */
+  padding-bottom: 1rem; /* Space below the heading */
+
+  display: inline-block; /* To apply the border only the length of the text */
+  margin-bottom: 2rem; /* Space below the heading line */
+}
+
+.certifications {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px; /* Increased gap for better separation of cards */
+}
+
+.certification-card {
+  max-width: 500px; /* Adjusted width */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12); /* Softer shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+  background: white; /* White background for the card */
+  border-radius: 8px; /* Rounded corners for the card */
+  padding: 20px;
+}
+
+/* Hover effect for the card */
+.certification-card:hover {
+  transform: translateY(-5px); /* Lifts the card up slightly */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.18); /* Darker shadow to give depth */
+}
+
+.mat-card-header {
+  background-color: #3498db; /* Colorful header background */
+  color: white; /* White text on the colorful background */
+  padding: 16px; /* More padding for better spacing */
+  border-top-left-radius: 8px; /* Rounded corners on the top left */
+  border-top-right-radius: 8px; /* Rounded corners on the top right */
+}
+
+.mat-card-image {
+  width: 50px; /* Ensure image takes up the full card width */
+  border-top-left-radius: 8px; /* Rounded corners on the top left */
+  border-top-right-radius: 8px; /* Rounded corners on the top right */
+}
+
+.mat-card-content {
+  margin-top: 20px;
+  padding: 30px; /* Consistent padding with the header */
+  font-size: 20px; /* Larger font size for readability */
+  text-align: left; /* Align text to the left */
+  color: #333; /* Dark text for readability */
+}
+
+/* Adding a bit of style to the Date line */
+.mat-card-content p strong {
+  margin-top: 15px;
+  color: #3498db; /* Blue color to match the header */
+}
+
+mat-card-title {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 10px;
+
+}
+mat-card-subtitle {
+    color:black;
+    font-size: 20px;
+    margin-bottom: 20px;
+
+}
+
+p {
+  font-size: 20px;
+
+
+}
+
+.goto-site-btn {
+    margin-top: 20px; /* Push the button to the bottom of the card */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
+    border-radius: 4px; /* Optional: Rounded corners for the button */
+    width: 100%; /* Optional: If you want the button to span the full width of the card */
+    box-sizing: border-box;
+    font-weight: bold;
+    font-size: 20px;/* Ensures padding is included in width */
+  }
+
+  .goto-site-btn:hover {
+    background-color: #3498db; /* Background color on hover */
+    color: white; /* Text color on hover */
+  }
+

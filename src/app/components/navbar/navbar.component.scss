@@ -23,6 +23,11 @@ header {
   /* Add styles for your logo here, such as width, height etc. */
 }
 
+.logo-container .logo:hover {
+  transform: scale(1.05); /* Enlarges the logo */
+  opacity: 0.8; /* Makes the logo slightly transparent */
+}
+
 /* This class will be toggled by Angular upon clicking the logo */
 .header-visible {
   transform: translateX(0); /* Bring the navbar into view */
@@ -115,8 +120,10 @@ header.visible {
   margin-left: 5px;
 }
 
-.linkedin-logo:hover {
-  opacity: 1; /* Full opacity on hover for interaction feedback */
+
+.linkedin-logo img:hover, .github-logo img:hover {
+  transform: scale(1.1); /* Slightly enlarges the logo on hover */
+  filter: brightness(90%); /* Optional: slightly darkens the logo to imply interactivity */
 }
 
 .linkedin {
@@ -138,9 +145,7 @@ header.visible {
   margin-left: 100px;
 }
 
-.github-logo:hover {
-  opacity: 1; /* Full opacity on hover for interaction feedback */
-}
+
 
 .github {
   width: 100px;

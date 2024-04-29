@@ -3,6 +3,8 @@ import { trigger, transition, animate, style } from '@angular/animations';
 import { MatCardModule } from '@angular/material/card';
 
 
+
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',

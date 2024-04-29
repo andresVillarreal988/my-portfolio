@@ -7,13 +7,27 @@
   align-items: center;
   text-align: center;
   color: white;
+  font-size: 20px;
+}
+
+h1 {
+  font-size: 40px;
+
 }
 
 .hero-content {
-  max-width: 700px;
+  width: 600px;
   background-color: #182130; /* Optional: for better readability */
   padding: 2rem;
   border-radius: 10px;
+}
+
+.buttonViewPort {
+  margin: 20px 0px;
+  height: 60px;
+  font-weight: bold;
+  font-size: 20px;
+
 }
 
 .about-section {
@@ -65,17 +79,32 @@ mat-card-content {
   display: flex;
   justify-content: space-around;
   padding: 2rem;
-  gap: 1rem; // Adds space between images
+  gap: 2rem; // Adds space between images
+}
+
+.buttonViewPort:hover {
+  transform: translateY(-2px); /* Moves the button up slightly to give an elevation effect */
+  box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.26); /* Increase the shadow for a "lifted" effect */
+  background-color: #1976d2; /* Change the background color for visual feedback */
+  color: #fff; /* Optional: Change the text color if needed */
 }
 
 mat-card img {
-  width: 100%; // Make images take up all available space
+  width: 100%; // Images fill their container
   max-height: 640px;
-  max-width: 400px;// Set a maximum height to ensure the images are not too tall
-  object-fit: cover; // Ensure the aspect ratio of the images is maintained
-  margin: 0 10px; // Add some space between the images
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Optional: add shadow for depth
+  max-width: 290px;
+  object-fit: cover; // Keeps image proportions intact
+  transition: transform 0.3s ease, box-shadow 0.3s ease; // Animations for transform and shadow
+  cursor: pointer; // Indicates interactivity
 }
+
+
+
+mat-card img:hover {
+  transform: scale(1.10); // Slightly enlarges the image
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); // Adds a deeper shadow to give a "lifted" effect
+}
+
 
 @media (max-width: 768px) {
   .about-images {
@@ -90,6 +119,7 @@ mat-card img {
 
 .about-content {
   padding: 40px;
+  width: 950px;
 
 }
 
@@ -114,23 +144,27 @@ mat-card img {
 
 .technologies-logos {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); // Creates a responsive grid
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); // Creates a responsive grid
   grid-gap: 30px; // Adds space between logos
   padding: 0 3rem; // Adds padding on the sides
-  max-width: 1200px; // Maximum width of the grid
+  max-width: 800px; // Maximum width of the grid
   margin: 0 auto; // Centers the grid in the section
 }
 
 .technologies-logos img {
-  width: 100%; // Makes the images responsive within their cell
-  max-width: 150px; // Maximum width of each logo
-  height: auto; // Maintains the aspect ratio of the logos
-  padding: 1rem; // Adds padding around the logos to create space
-  object-fit: contain; // Ensures the logos are fully visible within their cell
-   // Optional: Adds subtle shadow for depth
-  background-color: white; // Use a white background to accommodate any logo with transparency
-  border-radius: 5px;
-  // Optional: Rounds the corners of the images
+  width: 100%; // Ensures logos are responsive within their cell
+  max-width: 150px; // Sets a limit on logo size
+  height: auto; // Maintains aspect ratio
+  padding: 1rem; // Space around logos
+  object-fit: contain; // Ensures logos do not get cut off
+  transition: transform 0.3s ease, box-shadow 0.3s ease; // Smooth transition for transform and shadow
+  border-radius: 5px; // Rounded corners
+  cursor: pointer; // Indicates that the logo is interactive
+}
+
+.technologies-logos img:hover {
+  transform: scale(1.2); // Enlarges the logo by 10% on hover
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Adds shadow to make it look elevated
 }
 
 @media (max-width: 768px) {
