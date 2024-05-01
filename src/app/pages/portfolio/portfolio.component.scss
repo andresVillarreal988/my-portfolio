@@ -1,45 +1,115 @@
 .portfolio-container {
-  max-width: 700px;
-  margin: auto;
-  margin-top: 200px;
+  width: 700px;
+  margin: 150px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1); // Semi-transparent background for subtle visibility
+  backdrop-filter: blur(10px); // Background blur for a modern glass effect
+  border-radius: 10px; // Rounded corners for aesthetics
 }
 
 .experience {
+  width: 680px;
+  border: 6px solid black;
+  background: #fff; // White background for contrast
+  border-radius: 8px; // Soft rounded corners
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); // Subtle shadow for depth
+  padding: 5px; // Internal padding for spacing
+  margin-bottom: 40px; // Margin between each job experience entry
+  display: flex; // Flex display to align items
+  align-items: center; // Center alignment of items vertically
+  transition: transform 0.3s ease, box-shadow 0.5s ease; // Transitions for interactive effects
 
-  color:black;
-  background: #fff; // White background for the box
-  border-radius: 8px; // Rounded corners
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Subtle shadow for depth
-  padding: 2rem; // Spacing inside the box
-  margin-bottom: 2rem; // Space between each experience box
-  display: flex;
-  align-items: flex-start; // Align the logo and details to the start
-  flex-wrap: wrap; // Ensure responsiveness
-  gap: 1rem; // Spacing between logo and details when wrapped
+  &:hover {
+    transform: translateY(-5px); // Hover effect to lift the card
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); // Deeper shadow on hover for emphasis
+  }
 }
 
+ul {
+
+  color:black;
+  font-size: 20px;
+
+
+}
 .company-logo {
-  max-width: 400px; // Adjust as needed
-  margin-right: 1rem;
+  width: 200px; // Fixed width for consistency
+  height: 150px; // Fixed height to match width
+  object-fit: contain; // Ensures the logo fits without distortion
+   // Light background color for the logo area
+  padding: 10px; // Padding around the logo
+  border-radius: 0; // Square logos
+
+  margin-left: 25px;// Right margin for spacing between logo and text
+  &:hover {
+      transform: scale(1.35);
+
+    }
 }
 
 .experience-details {
-  flex-grow: 1;
-  font-size: 20px;
+  background: rgba(255, 255, 255, 0.1);
+
+  padding: 10px;
+
+  margin-left: 30px;
+  margin-right: 20px;
+  flex-grow: 1; // Allows the text block to take up remaining space
 }
 
 .role {
-  font-weight: bold;
+  font-size: 20px; // Prominent font size for role
+  font-weight: bold; // Bold text for importance
+  color: #333; // Dark grey for text
 }
 
 .dates {
-  font-style: italic;
-  color: #666;
+  font-size: 18px; // Smaller font size for dates
+  font-style: italic; // Italicized for stylistic preference
+  color: #666; // Lighter grey to differentiate from main text
 }
 
 h1 {
-  color:white;
-  margin-bottom: 40px;
+  text-align: center; // Centers the title of the section
+  color: white; // White text for visibility
+  padding-bottom: 20px; // Spacing below the title
+}
+
+h3 {
+  color: black;
+  font-size: 27px;
 
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.experience {
+  animation: fadeIn 1s ease-out; // Animation for each experience card
+}
+
+@media (max-width: 768px) {
+  .experience {
+    flex-direction: column; // Stack logo and details vertically on smaller screens
+    align-items: center; // Center alignment for consistency
+
+    .company-logo {
+      margin-bottom: 10px; // Space between logo and details
+      width: 100px; // Smaller logo for smaller screens
+      height: 100px; // Maintain aspect ratio
+    }
+
+    .experience-details {
+      align-items: center; // Center text details under the logo
+      text-align: center; // Center-align text for better readability on small screens
+    }
+  }
+}

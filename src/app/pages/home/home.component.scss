@@ -1,5 +1,5 @@
 .hero-section {
-  background: url('../../../assets/images/webdev1.jpg') no-repeat center center fixed;
+  background: url('../../../assets/images/background6.jpg') no-repeat 40% 70%;
   background-size: cover;
   height: 90vh;
   display: flex;
@@ -8,19 +8,23 @@
   text-align: center;
   color: white;
   font-size: 20px;
+
 }
 
 h1 {
   font-size: 40px;
-
 }
 
 .hero-content {
   margin-top: 180px;
   width: 400px;
-  background-color: #182130; /* Optional: for better readability */
+  background-color: #182130;
   padding: 2rem;
   border-radius: 10px;
+  &:hover {
+      background-color: darken(#182130, 10%);
+      transform: translateY(-5px); // Subtle lift effect
+    }
 }
 
 .buttonViewPort {
@@ -28,149 +32,161 @@ h1 {
   height: 60px;
   font-weight: bold;
   font-size: 20px;
-
-}
-
-.about-section {
-  padding: 2rem;
-  display: flex;
-  justify-content: center;
-}
-
-mat-card {
-  max-width: 900px; // Adjust based on your design preference
-  margin-top: -5rem; // Pulls the card up into the hero section
+  &:hover {
+      background-color: lighten(#1976d2, 10%);
+      transform: scale(1.05); // Slight enlargement for visual feedback
+    }
 }
 
 .about-section {
   display: flex;
-  justify-content: center;
-  padding: 4rem 0; // Adds padding above and below the section
+  flex-direction: row; // Ensures content is laid out horizontally
+  align-items: center; // Center aligns the items vertically
+  padding: 4rem; // Padding around the entire section
+  background: url('../../../assets/images/background3.jpg') no-repeat center center; // Set your background image
+  background-size: cover; // Ensure background covers the entire section
+  color: white; // Set text color for visibility
+  width: 100%; // Ensure section spans the full width
 }
 
 mat-card {
-  max-width: 1650px; // Adjust as needed for your design
-  margin: auto; // Center the card in the section
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); // Adds subtle shadow for depth
-  border-radius: 15px; // Soften the edges of the card
-  overflow: hidden; // Ensures the child elements adhere to the border radius
-}
+  width: 30%; // Adjust width to your preference
+  margin-right: auto;
+   margin-left: 450px;// Keeps the card pinned to the left
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); // Adds depth with shadow
+  border-radius: 15px; // Rounds the corners of the card
+  background-color: rgba(255, 255, 255, 0.9); // Semi-transparent white for the card
+  padding: 2rem; // Padding inside the card for content spacing
 
-mat-card-header {
-  display: flex;
-  justify-content: center;
-  background-color: #182130; // Matches the header color to hero content
-  color: white;
-  padding: 2rem;
-  border-bottom: 5px solid #20304a; // Adds a distinct separation from the content
+
 }
 
 mat-card-title {
-  font-size: 2.5rem; // Increase the title font size for emphasis
+  font-size:30px;
+
 }
 
-mat-card-content {
-  padding: 2rem;
-  font-size: 1.2rem; // Adjust the font size for better readability
-  line-height: 1.6; // Increase line height for better text flow
-  color: #333; // Dark color for text for readability
-}
+mat-card:hover{
 
-.about-images {
-  display: flex;
-  justify-content: space-around;
-  padding: 2rem;
-  gap: 2rem; // Adds space between images
-}
+        transform: scale(1.02);
 
-.buttonViewPort:hover {
-  transform: translateY(-2px); /* Moves the button up slightly to give an elevation effect */
-  box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.26); /* Increase the shadow for a "lifted" effect */
-  background-color: #1976d2; /* Change the background color for visual feedback */
-  color: #fff; /* Optional: Change the text color if needed */
-}
-
-mat-card img {
-  width: 100%; // Images fill their container
-  max-height: 640px;
-  max-width: 290px;
-  object-fit: cover; // Keeps image proportions intact
-  transition: transform 0.3s ease, box-shadow 0.3s ease; // Animations for transform and shadow
-  cursor: pointer; // Indicates interactivity
-}
-
-
-
-mat-card img:hover {
-  transform: scale(1.10); // Slightly enlarges the image
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); // Adds a deeper shadow to give a "lifted" effect
-}
-
-
-@media (max-width: 768px) {
-  .about-images {
-    flex-direction: column;
-  }
-
-  mat-card img {
-    max-width: 100%; // Each image will take the full width of the card
-    margin-bottom: 20px; // Add space between stacked images
-  }
 }
 
 .about-content {
-  padding: 40px;
-  width: 950px;
-
+  display: flex;
+  flex-direction: column; // Stacks children vertically
+  align-items: flex-start; // Aligns children to the start of the flex container
 }
 
+mat-card-header {
+  background-color: #20304a;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  font-size: 2.5rem; // Larger font size for the title
+  border-bottom: 5px solid #255784; // Adjusted color for a modern look
+}
+
+
+
 .about-text {
-  font-size: 25px;
-  color: black;
+  text-align: center;
+  color: #333;
+  font-size: 1.5rem; // Larger font size for readability
+  line-height: 2; // More space between lines for a clean look
+  margin-bottom: 2rem;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.about-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+}
+
+mat-card img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+  }
+}
 
 
+mat-card img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .about-images {
+    grid-template-columns: 1fr;
+  }
+
+  .about-section {
+      flex-direction: column; // Stacks section content vertically on small screens
+      align-items: center; // Centers content horizontally
+    }
+
+    mat-card {
+      width: 90%; // Increases width for smaller screens
+      margin: 1rem 0; // Adds margin above and below on small screens
+    }
+
+
+  mat-card img {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
 }
 
 .technologies-section {
-  padding: 4rem 0; // Adds padding above and below the section
-  background-color: #f5f5f5; // Use a different background to distinguish the section
-  text-align: center; // Center-aligns the text
+  background: url('../../../assets/images/background4.jpg') no-repeat 20% 80%;
+
+
+  padding: 4rem 0;
+
+  text-align: center;
 }
 
 .technologies-title {
-  font-size: 2rem; // Sets the title font size
-  margin-bottom: 2rem; // Adds space below the title
-  color: #333; // Sets the title color
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: white;
 }
 
 .technologies-logos {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); // Creates a responsive grid
-  grid-gap: 30px; // Adds space between logos
-  padding: 0 3rem; // Adds padding on the sides
-  max-width: 800px; // Maximum width of the grid
-  margin: 0 auto; // Centers the grid in the section
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  grid-gap: 30px;
+  padding: 0 3rem;
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 100%;
 }
 
 .technologies-logos img {
-  width: 100%; // Ensures logos are responsive within their cell
-  max-width: 150px; // Sets a limit on logo size
-  height: auto; // Maintains aspect ratio
-  padding: 1rem; // Space around logos
-  object-fit: contain; // Ensures logos do not get cut off
-  transition: transform 0.3s ease, box-shadow 0.3s ease; // Smooth transition for transform and shadow
-  border-radius: 5px; // Rounded corners
-  cursor: pointer; // Indicates that the logo is interactive
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  padding: 1rem;
+  object-fit: contain;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .technologies-logos img:hover {
-  transform: scale(1.2); // Enlarges the logo by 10% on hover
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Adds shadow to make it look elevated
+  transform: scale(1.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 768px) {
   .technologies-logos {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); // Adjusts grid for smaller screens
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   }
 }
 
@@ -178,21 +194,16 @@ mat-card img:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 120px; // Or any other fixed height you prefer
-  padding: 1rem; // This padding can be adjusted
-  // Remove background-color and box-shadow if you want full transparency
+  height: 120px;
+  padding: 1rem;
 }
 
 .logo-container img {
-  max-width: 80%; // Scales down the logo a bit, preventing it from touching the edges
-  max-height: 80%; // Same as above
+  max-width: 80%;
+  max-height: 80%;
   object-fit: contain;
-  // Remove any border or box-shadow applied directly to the image
 }
 
 .imagenlogos {
   margin-right: 20px;
-
 }
-
-

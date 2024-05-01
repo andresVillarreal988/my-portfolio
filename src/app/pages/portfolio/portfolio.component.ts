@@ -16,6 +16,22 @@ interface Experience {
 })
 export class PortfolioComponent implements OnInit {
   experiences: Experience[] = [
+  {
+    "companyLogo": "assets/images/logomiru.png", // Path to MIRU's logo if available
+    "companyName": "MIRU",
+    "role": "Full Stack Developer",
+    "startDate": "February 2024", // Start date of your tenure at MIRU
+    "endDate": "Present", // or "Month Year" if the project/role has concluded
+    "responsibilities": [
+      "Developed a comprehensive web platform aimed at facilitating the real estate buying and selling process, enhancing user experience.",
+      "Implemented a dynamic listing system that allows users to filter, search, and manage property listings efficiently, increasing user engagement and satisfaction.",
+      "Designed back end models, services, controllers, repositories and mapped the objects to Postgres tables by using Hibernate and JPA",
+      "Collaborated closely with a cross-functional team to deliver the main functionalities of the site. Led the weekly team meeting for the dev team.",
+      "Utilized technologies such as Angular for the frontend to create interactive user interfaces, Spring for backend services.",
+      "Led the deployment and continuous integration of the project using Docker and Google Cloud, significantly reducing downtime and improving the deployment process."
+    ]
+  },
+
     {
       companyLogo: 'assets/images/softtek.png',
       companyName: 'Softtek',
@@ -65,20 +81,7 @@ export class PortfolioComponent implements OnInit {
              // ... more responsibilities
            ],
          },
-     {
-           companyLogo: 'assets/images/primeroseguros.png',
-           companyName: 'Primero Seguros',
-           role: 'Software Developer',
-           startDate: 'January 2021',
-           endDate: 'June 2021',
-           responsibilities: [
-             'Development of a web system to generate business plans with a focus on simplicity and help for inexperienced users in the area',
-             'Design and creation of the database',
-             'Technologies used: Java, MySQL, JavaScript, HTML5, Bootstrap',
 
-             // ... more responsibilities
-           ],
-         }
     // ... more experiences
   ];
 

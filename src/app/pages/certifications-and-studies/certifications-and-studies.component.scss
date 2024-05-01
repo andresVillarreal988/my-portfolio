@@ -28,6 +28,7 @@
   background: white; /* White background for the card */
   border-radius: 8px; /* Rounded corners for the card */
   padding: 20px;
+  border: 6px solid black;
 }
 
 /* Hover effect for the card */
@@ -87,7 +88,7 @@ p {
     margin-top: 20px; /* Push the button to the bottom of the card */
     transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
     border-radius: 4px; /* Optional: Rounded corners for the button */
-    width: 100%; /* Optional: If you want the button to span the full width of the card */
+    width: 200px; /* Optional: If you want the button to span the full width of the card */
     box-sizing: border-box;
     font-weight: bold;
     font-size: 20px;/* Ensures padding is included in width */
