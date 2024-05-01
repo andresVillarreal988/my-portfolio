@@ -23,6 +23,7 @@ export class PortfolioComponent implements OnInit {
     "startDate": "February 2024", // Start date of your tenure at MIRU
     "endDate": "Present", // or "Month Year" if the project/role has concluded
     "responsibilities": [
+      "https://ocr-miru-dev.uc.r.appspot.com/",
       "Developed a comprehensive web platform aimed at facilitating the real estate buying and selling process, enhancing user experience.",
       "Implemented a dynamic listing system that allows users to filter, search, and manage property listings efficiently, increasing user engagement and satisfaction.",
       "Designed back end models, services, controllers, repositories and mapped the objects to Postgres tables by using Hibernate and JPA",
