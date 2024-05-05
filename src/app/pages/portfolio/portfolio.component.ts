@@ -28,7 +28,7 @@ export class PortfolioComponent implements OnInit {
       "Implemented a dynamic listing system that allows users to filter, search, and manage property listings efficiently, increasing user engagement and satisfaction.",
       "Designed back end models, services, controllers, repositories and mapped the objects to Postgres tables by using Hibernate and JPA.",
       "Collaborated closely with a cross-functional team to deliver the main functionalities of the site. Led the weekly team meeting for the dev team.",
-      "Utilized technologies such as Angular for the frontend to create interactive user interfaces, Spring for backend services.",
+      "Utilized technologies such as Angular for the frontend to create interactive user interfaces and Spring for backend services.",
       "Led the deployment and continuous integration of the project using Docker and Google Cloud, significantly reducing downtime and improving the deployment process."
     ]
   },
@@ -45,7 +45,7 @@ export class PortfolioComponent implements OnInit {
         'Engineered an Autochecker feature to verify the identity of users attempting to make updates, thereby bolstering security measures.',
         'Designed user interfaces and managed views to optimize user experience and facilitate seamless data updates.',
         'Created detailed flowcharts for User Stories, aiding in the visualization and planning of development tasks.',
-        'Utilized a diverse technology stack, including Java, C#, Struts, MVC, DAO, HTML5, CSS3, JavaScript, XML, WebLogic, jQuery. Softtek Courses'
+        'Utilized a diverse technology stack, including Java, C#, Struts, MVC, DAO, HTML5, CSS3, JavaScript, XML, WebLogic, jQuery.'
         // ... more responsibilities
       ],
     },
@@ -61,30 +61,39 @@ export class PortfolioComponent implements OnInit {
             'Maintained and updated the customer and supplier catalogs, ensuring accuracy and reliability.',
             'Managed database operations, including creating and executing stored queries and procedures in SQL Server.',
             'Conducted functionality testing and debugging to ensure robust application performance.',
-            'Utilized technologies such as Java, JSF, MVC, DAO, Facade Front Controller, HTML5, CSS3, JavaScript, XML, WebServices, Oracle 11g'
+            'Utilized technologies such as Java, JSF, MVC, DAO, Facade Front Controller, HTML5, CSS3, JavaScript, XML, WebServices, Oracle 11g.'
             // ... more responsibilities
           ],
         },
-     {
-           companyLogo: 'assets/images/management-solutions.svg',
-           companyName: 'Management Solutions',
-           role: 'Java Developer',
-           startDate: 'July 2021',
-           endDate: 'November 2022',
-           responsibilities: [
-             'Developed a sophisticated system for managing customer records for Santander, optimizing operational efficiency.',
-             'Created a specialized module to handle incidents across various company departments, enhancing response capabilities.',
-             'Improved the front-end functionality of the warehouse management system, increasing user engagement.',
-             'Performed preventive and corrective maintenance on production line system modules, ensuring continuous operation.',
-             'Implemented comprehensive testing and debugging procedures to maintain system integrity and functionality.',
-             'Updated the corporate website, enhancing user experience and information accessibility.',
-             'Integrated technologies including Java, Spring, MVC, DAO, Front Controller, HTML5, CSS3, JavaScript, XML, WebServices, Oracle 11g, Ajax'
-             // ... more responsibilities
-           ],
-         },
+//      {
+//            companyLogo: 'assets/images/management-solutions.svg',
+//            companyName: 'Management Solutions',
+//            role: 'Java Developer',
+//            startDate: 'July 2021',
+//            endDate: 'November 2022',
+//            responsibilities: [
+//              'Developed a sophisticated system for managing customer records for Santander, optimizing operational efficiency.',
+//              'Created a specialized module to handle incidents across various company departments, enhancing response capabilities.',
+//              'Improved the front-end functionality of the warehouse management system, increasing user engagement.',
+//              'Performed preventive and corrective maintenance on production line system modules, ensuring continuous operation.',
+//              'Implemented comprehensive testing and debugging procedures to maintain system integrity and functionality.',
+//              'Updated the corporate website, enhancing user experience and information accessibility.',
+//              'Integrated technologies including Java, Spring, MVC, DAO, Front Controller, HTML5, CSS3, JavaScript, XML, WebServices, Oracle 11g, Ajax.'
+//              // ... more responsibilities
+//            ],
+//          },
 
     // ... more experiences
   ];
 
   ngOnInit(): void {}
+
+  isUrl(text: string): boolean {
+      try {
+        new URL(text);
+        return true;
+      } catch {
+        return false;
+      }
+    }
 }

@@ -8,7 +8,10 @@
       <p class="dates">{{ experience.startDate }} - {{ experience.endDate }}</p>
       <ul>
         <li *ngFor="let responsibility of experience.responsibilities">
-          {{ responsibility }}
+          <ng-container *ngIf="isUrl(responsibility); else notUrl">
+            <a href="{{ responsibility }}" target="_blank">{{ responsibility }}</a>
+          </ng-container>
+          <ng-template #notUrl>{{ responsibility }}</ng-template>
         </li>
       </ul>
     </div>
